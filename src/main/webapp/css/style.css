@@ -1,0 +1,158 @@
+/* 🌗 Dark Mode Base */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* 🔹 Admin Theme */
+.admin-theme {
+    background-color: rgb(185, 162,  255);
+    color: #333;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+body.dark-mode .admin-theme {
+    background-color: #2e2e2e;
+    color: #f5f5f5;
+}
+
+/* 🔹 User Theme */
+.user-theme {
+    background-color: rgb(0, 128, 128);
+    color: #333;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+body.dark-mode .user-theme {
+    background-color: #1f1f1f;
+    color: #f5f5f5;
+}
+
+/* 🧱 Global Container */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+}
+
+/* 🔘 Dark Mode Toggle Button */
+.toggle-theme {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    z-index: 999;
+}
+
+.toggle-theme:hover {
+    background-color: #555;
+}
+
+/* 🧾 Form Styling */
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.6rem 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px #007bff77;
+}
+
+/* 📤 Submit Buttons */
+button,
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* 📦 Blog Cards & Forms */
+.blog-card,
+.question-box,
+.form-card {
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+body.dark-mode .blog-card,
+body.dark-mode .question-box,
+body.dark-mode .form-card {
+    background-color: #2b2b2b;
+    color: #eee;
+}
+
+/* 🛑 Error Messages */
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* 🔠 Header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+body.dark-mode header h2 {
+    color: #f0f0f0;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .toggle-theme {
+        top: 10px;
+        right: 10px;
+        font-size: 0.8rem;
+    }
+}
