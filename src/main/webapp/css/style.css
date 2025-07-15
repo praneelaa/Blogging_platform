@@ -13,7 +13,6 @@ body.dark-mode {
 
 /* 🌅 Home Page Background */
 body.home-bg {
-    background-image: url('../images/blog-opportunities.jpeg'); /* ✅ Ensure image path is correct */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
