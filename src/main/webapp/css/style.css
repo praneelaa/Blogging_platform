@@ -1,55 +1,93 @@
 /* 🌗 Dark Mode Base */
+
+body {
+    color: #000; /* black for light mode */
+    background-color: #fff; /* optional */
+}
+
+
 body.dark-mode {
     background-color: #121212;
     color: #e0e0e0;
 }
 
+/* 🌅 Home Page Background */
+body.home-bg {
+    background-image: url('../images/blog-opportunities.jpeg'); /* ✅ Ensure image path is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 🟡 Default Light Mode Background & Text */
+body {
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 /* 🔹 Admin Theme */
 .admin-theme {
-    background-color: rgb(185, 162,  255);
-    color: #333;
+    background-color: rgba(185, 162, 255, 0.85);
+    color: #000;
     padding: 2rem;
     border-radius: 10px;
 }
 
 body.dark-mode .admin-theme {
-    background-color: #2e2e2e;
+    background-color: rgba(46, 46, 46, 0.85);
     color: #f5f5f5;
 }
 
 /* 🔹 User Theme */
 .user-theme {
-    background-color: rgb(0, 128, 128);
-    color: #333;
+    background-color: rgba(0, 128, 128, 0.85);
+    color: #000;
     padding: 2rem;
     border-radius: 10px;
 }
 
 body.dark-mode .user-theme {
-    background-color: #1f1f1f;
+    background-color: rgba(31, 31, 31, 0.85);
     color: #f5f5f5;
 }
 
-/* 🧱 Global Container */
+/* 📦 Main Container */
 .container {
     max-width: 800px;
-    margin: 2rem auto;
+    width: 90%;
     padding: 2rem;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 3rem auto;
+    background-color: rgba(255, 255, 255, 0.93); /* Light transparent */
+    color: #000;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    backdrop-filter: blur(5px);
 }
 
 body.dark-mode .container {
-    background-color: #1e1e1e;
+    background-color: rgba(30, 30, 30, 0.93);
+    color: #f0f0f0;
 }
 
-/* 🔘 Dark Mode Toggle Button */
+/* 🟢 Dark Mode Toggle */
 .toggle-theme {
     position: fixed;
     top: 20px;
     right: 20px;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
     background-color: #333;
     color: white;
     border: none;
@@ -63,61 +101,67 @@ body.dark-mode .container {
     background-color: #555;
 }
 
-/* 🧾 Form Styling */
+/* ✍️ Inputs & Textareas */
 input[type="text"],
 input[type="password"],
 textarea {
     width: 100%;
-    padding: 0.75rem;
-    margin: 0.6rem 0;
+    padding: 0.8rem;
+    margin: 0.8rem 0;
     border-radius: 6px;
     border: 1px solid #ccc;
     font-size: 1rem;
     box-sizing: border-box;
+    background-color: #fdfdfd;
+    color: #222;
 }
 
 input:focus,
 textarea:focus {
     outline: none;
     border-color: #007bff;
-    box-shadow: 0 0 5px #007bff77;
+    box-shadow: 0 0 6px #007bff77;
 }
 
-/* 📤 Submit Buttons */
+/* 📤 Buttons */
 button,
 .btn {
     display: inline-block;
-    padding: 0.7rem 1.2rem;
+    padding: 0.8rem 1.5rem;
     font-size: 1rem;
     color: white;
-    background-color: #007bff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 button:hover,
 .btn:hover {
-    background-color: #0056b3;
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #0056b3, #003d80);
 }
 
-/* 📦 Blog Cards & Forms */
+/* 📝 Cards (Blog, Question, Form) */
 .blog-card,
 .question-box,
 .form-card {
-    background-color: #f5f5f5;
+    background-color: rgba(255, 255, 255, 0.88);
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: left;
+    backdrop-filter: blur(3px);
+    color: #000;
 }
 
 body.dark-mode .blog-card,
 body.dark-mode .question-box,
 body.dark-mode .form-card {
-    background-color: #2b2b2b;
+    background-color: rgba(43, 43, 43, 0.9);
     color: #eee;
 }
 
@@ -136,7 +180,7 @@ header {
 }
 
 header h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #333;
 }
 
@@ -148,11 +192,18 @@ body.dark-mode header h2 {
 @media (max-width: 600px) {
     .container {
         padding: 1rem;
+        margin: 1rem;
     }
 
     .toggle-theme {
         top: 10px;
         right: 10px;
         font-size: 0.8rem;
+    }
+
+    button,
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
     }
 }
